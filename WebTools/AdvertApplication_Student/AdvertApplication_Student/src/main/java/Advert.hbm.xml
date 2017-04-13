@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 18, 2017 2:21:16 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.yusuf.spring.pojo.Advert" table="adverttable">
+       <id column="id" name="id" type="long">
+      <generator class="native"/>
+    </id>
+    <property column="message" name="message" type="string"/>
+    <property column="title" name="title" type="string"/>
+    
+     <many-to-one class="com.yusuf.spring.pojo.Category" column="category" foreign-key="fk_advert_category" name="category" not-null="true"/>
+  
+    </class>
+</hibernate-mapping>
